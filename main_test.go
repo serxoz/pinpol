@@ -16,10 +16,10 @@ func TestOrientation(t *testing.T) {
 		  └───────────x
 		     1  2  3
 	*/
-	p := Point{x: 1, y: 1}
-	q := Point{x: 1, y: 2}
-	r := Point{x: 2, y: 1}
-	z := Point{x: 3, y: 1}
+	p := Point{X: 1, Y: 1}
+	q := Point{X: 1, Y: 2}
+	r := Point{X: 2, Y: 1}
+	z := Point{X: 3, Y: 1}
 
 	o0 := orientation(p, r, z) // collinear
 	o1 := orientation(p, q, r) // clockwise 1
@@ -42,10 +42,10 @@ func TestDoIntersect(t *testing.T) {
 		  └───────────x
 		     1  2  3
 	*/
-	p := Point{x: 1, y: 1}
-	q := Point{x: 1, y: 2}
-	r := Point{x: 2, y: 1}
-	z := Point{x: 3, y: 2}
+	p := Point{X: 1, Y: 1}
+	q := Point{X: 1, Y: 2}
+	r := Point{X: 2, Y: 1}
+	z := Point{X: 3, Y: 2}
 
 	// vector1 = p->z
 	// vector2 = q->r
@@ -73,11 +73,11 @@ func TestIsInside(t *testing.T) {
 		  └───────────x
 		     1  2  3
 	*/
-	p := Point{x: 1, y: 1}
-	q := Point{x: 1, y: 3}
-	r := Point{x: 2, y: 2}
-	z := Point{x: 3, y: 3}
-	y := Point{x: 3, y: 1}
+	p := Point{X: 1, Y: 1}
+	q := Point{X: 1, Y: 3}
+	r := Point{X: 2, Y: 2}
+	z := Point{X: 3, Y: 3}
+	y := Point{X: 3, Y: 1}
 
 	var polygon1 []Point
 	polygon1 = append(polygon1, p)

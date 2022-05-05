@@ -9,17 +9,17 @@ var INF int = 10000
 
 // Point type for points...
 type Point struct {
-	x int
-	y int
+	X int
+	Y int
 }
 
 // onSegment checks if a point is on "pr" vector
 func onSegment(p Point, q Point, r Point) bool {
 	// floats because math.Max() and math.Min()
-	if float64(q.x) <= math.Max(float64(p.x), float64(r.x)) &&
-		float64(q.x) >= math.Min(float64(p.x), float64(r.x)) &&
-		float64(q.y) <= math.Max(float64(p.y), float64(r.y)) &&
-		float64(q.y) >= math.Min(float64(p.y), float64(r.y)) {
+	if float64(q.X) <= math.Max(float64(p.X), float64(r.X)) &&
+		float64(q.X) >= math.Min(float64(p.X), float64(r.X)) &&
+		float64(q.Y) <= math.Max(float64(p.Y), float64(r.Y)) &&
+		float64(q.Y) >= math.Min(float64(p.Y), float64(r.Y)) {
 		return true
 	}
 	return false
@@ -31,7 +31,7 @@ func onSegment(p Point, q Point, r Point) bool {
 // 1 -> clockwise
 // 2 -> counterclockwise
 func orientation(p Point, q Point, r Point) int {
-	val := (q.y-p.y)*(r.x-q.x) - (q.x-p.x)*(r.y-q.y)
+	val := (q.Y-p.Y)*(r.X-q.X) - (q.X-p.X)*(r.Y-q.Y)
 
 	// collinear
 	if val == 0 {
@@ -91,7 +91,7 @@ func IsInside(polygon []Point, n int, p Point) bool {
 	}
 
 	// Create a point for line segment from p to infinite
-	extreme := Point{x: INF, y: p.y}
+	extreme := Point{X: INF, Y: p.Y}
 
 	// Count intersections of the above line with sides of polygon
 	count := 0
