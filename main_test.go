@@ -16,8 +16,8 @@ func TestOrientation(t *testing.T) {
 		  └───────────x
 		     1  2  3
 	*/
-	p := Point{X: 1, Y: 1}
-	q := Point{X: 1, Y: 2}
+	p := Point{X: 1.2, Y: 1}
+	q := Point{X: 1, Y: 2.3}
 	r := Point{X: 2, Y: 1}
 	z := Point{X: 3, Y: 1}
 
@@ -42,8 +42,8 @@ func TestDoIntersect(t *testing.T) {
 		  └───────────x
 		     1  2  3
 	*/
-	p := Point{X: 1, Y: 1}
-	q := Point{X: 1, Y: 2}
+	p := Point{X: 1.1, Y: 1}
+	q := Point{X: 1, Y: 2.5}
 	r := Point{X: 2, Y: 1}
 	z := Point{X: 3, Y: 2}
 
@@ -73,8 +73,8 @@ func TestIsInside(t *testing.T) {
 		  └───────────x
 		     1  2  3
 	*/
-	p := Point{X: 1, Y: 1}
-	q := Point{X: 1, Y: 3}
+	p := Point{X: 1.1, Y: 1}
+	q := Point{X: 1, Y: 3.8}
 	r := Point{X: 2, Y: 2}
 	z := Point{X: 3, Y: 3}
 	y := Point{X: 3, Y: 1}

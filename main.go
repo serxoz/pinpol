@@ -5,12 +5,12 @@ import (
 )
 
 // INF Define Infinite
-var INF int = 10000
+var INF float64 = 10000
 
 // Point type for points...
 type Point struct {
-	X int
-	Y int
+	X float64
+	Y float64
 }
 
 // onSegment checks if a point is on "pr" vector
